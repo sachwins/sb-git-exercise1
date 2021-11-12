@@ -1,0 +1,219 @@
+1. Create a repository
+—Login to Github and create new repository
+—Use “git init” in terminal (Initialized empty Git repository in /Volumes/All Work/gitweb1/.git/) 
+
+2. Make some changes -- add some files, change content of some files
+—Add some files using (git add .) 
+—No msg was shown
+
+3. Commit changes
+—Commit files using (git commit -m “Commit 1”)
+— [master (root-commit) d63f68c] Commit1
+— 29 files changed, 16832 insertions(+)
+
+4. repeat steps 1-3 for 2 more times. try to remove and ignore some files . Use git diff before each commit.
+—Added some files and make changes to exiting file. 
+—Create a gitignore file using (touch .gitignore)
+—Find difference using (git diff) Below msg was shown
+     diff --git a/index.html b/index.html
+   index 632f328..4b67ce9 100755
+   --- a/index.html
+   +++ b/index.html
+
+5. create changes and revert those changes using git when those changes are not added to staging are
+—revert changes using (git checkout -- index.html)
+—No msg was shown
+
+6. create changes and revert those changes after adding changes to staging area
+— used (git reset HEAD .) for multiple files
+—  Unstaged changes after reset:
+   M	 index.html
+
+7. create change and revert those changes after committing those changes.
+— Used (git revert 02764f13e5952c95210d5187e8f3f3fe41959c84 [Commit ID])
+error: could not revert 02764f1... Commit2
+hint: after resolving the conflicts, mark the corrected paths
+hint: with 'git add <paths>' or 'git rm <paths>'
+hint: and commit the result with 'git commit'
+—I accepted the changes in vscode and reverted.
+
+8. Check repository status before adding changes to staging area, after adding changes to staging area and after committing changes .
+— Used (git status) Before adding to staging
+  On branch master
+  Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   index.html
+
+
+— Used (git status) after adding to staging
+   On branch master
+   Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   index.html
+
+
+— Used (git status) after committing
+   On branch master
+   nothing to commit, working tree clean
+
+9. Display all the commits.
+— Used (git log)
+  commit 5758f714113f5b9654cc033d873b91b7e728126e (HEAD -> master)
+  Author: Sachin <sachin.barman@vinsol.com>
+  Date:   Fri Nov 12 14:24:13 2021 +0530
+
+    Commit5
+
+  commit 066aa9dc6a34b8807e854fed757668065e48b97c
+  Author: Sachin <sachin.barman@vinsol.com>
+  Date:   Fri Nov 12 14:17:46 2021 +0530
+
+    Commit4
+
+  commit e12b05cd8171e6e29ff01b1e39e714a53cfae412
+  Author: Sachin <sachin.barman@vinsol.com>
+  Date:   Fri Nov 12 14:06:27 2021 +0530
+
+    Commit3
+
+  commit 02764f13e5952c95210d5187e8f3f3fe41959c84 
+  Author: Sachin <sachin.barman@vinsol.com>
+  Date:   Fri Nov 12 13:59:54 2021 +0530
+
+    Commit2
+
+  commit d63f68cc460fff0eaf2c9cd505e878dfa92a324c
+  Author: Sachin <sachin.barman@vinsol.com>
+  Date:   Fri Nov 12 13:29:26 2021 +0530
+
+    Commit1
+
+
+10. Display a specific commit.
+— Used (git log -p -1)
+   commit 5758f714113f5b9654cc033d873b91b7e728126e (HEAD -> master)
+   Author: Sachin <sachin.barman@vinsol.com>
+   Date:   Fri Nov 12 14:24:13 2021 +0530
+
+    Commit5
+
+   diff --git a/index.html b/index.html
+   index 5f1c32b..8424622 100755
+   --- a/index.html
+   +++ b/index.html
+   @@ -30,7 +30,7 @@
+           <li class="nav-item"><a class="nav-link active" href="#">Success Story</a> </li>
+           <li class="nav-item"><a class="nav-link" href="#">About Us</a> </li>
+           <li class="nav-item"><a class="nav-link" href="#">Our Blog</a> </li>
+   -          <li class="nav-item"><a class="nav-link" href="#">Contact</a> </li>
+   +          <li class="nav-item"><a class="nav-link" href="#">Contacts</a> </li>^M
+         </ul>
+       </div>
+     </nav>
+
+
+11. create branches called "feature1" and "feature2" from master. 11 . Delete branch "feature2".
+— Used (git checkout -b feature1) to create a new branch “feature1” from master
+
+— Switched to Master  Using (git checkout master)
+
+— Used (git checkout -b feature2) to create a new branch “feature2” from master
+
+— Used ( git branch -d feature2 ) To delete branch “feature2”
+
+12. 	Make some commits on "feature1". 
+— Used (git commit -m "blog page added")
+   [feature1 bb9ff50] blog page added
+  1 file changed, 268 insertions(+)
+  create mode 100644 blog.html
+
+
+13. 	Make some commits on branch ”master”. 
+— Used (git commit -m "contact added")
+   [master b66fec7] contact added
+  1 file changed, 268 insertions(+)
+  create mode 100644 contact.html
+
+14. 	merge branch "feature1" in "master" (make some conflicts by changing same file on same line in both the branches) 
+— Used (git merge feature1)
+   Merge made by the 'recursive' strategy.
+ blog.html | 268 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 268 insertions(+)
+ create mode 100644 blog.html
+
+15. 	create branch "feature2" from master.
+— Used (git checkout -b feature2)
+
+15. 	Make some commits on "feature2".
+— Used (git commit -m "Commit in branch feature2")
+  [feature2 ddd5cfe] Commit in branch feature2
+  3 files changed, 9 insertions(+), 142 deletions(-)
+
+
+16. 	Make some commits on branch "master".
+— Used (git commit -m "Banner section remove from index")
+  [master 50775be] Banner section remove from index
+  1 file changed, 1 insertion(+), 15 deletions(-)
+
+
+17. 	rebase branch "master" in "feature2" (make some conflicts by changing same file on same line in both the branches) .
+— Used (git rebase master)
+  First, rewinding head to replay your work on top of it...
+  Applying: Commit in branch feature2
+  Using index info to reconstruct a base tree...
+  M	blog.html
+  M	contact.html
+  M	index.html
+  Falling back to patching base and 3-way merge...
+  Auto-merging index.html
+  CONFLICT (content): Merge conflict in index.html
+  Auto-merging contact.html
+  CONFLICT (content): Merge conflict in contact.html
+  Auto-merging blog.html
+  CONFLICT (content): Merge conflict in blog.html
+  error: Failed to merge in the changes.
+  Patch failed at 0001 Commit in branch feature2
+  hint: Use 'git am --show-current-patch' to see the failed patch
+
+  Resolve all conflicts manually, mark them as resolved with
+  "git add/rm <conflicted_files>", then run "git rebase --continue".
+  You can instead skip this commit: run "git rebase --skip".
+  To abort and get back to the state before "git rebase", run "git rebase --abort".
+
+—Then fixed conflicts mannually
+
+— Then used (git add .) 
+
+—Then used (git rebase --continue) 
+ Applying: Commit in branch feature2
+
+
+18. 	find the differences between "merge" and "rebase" in above cases.
+—Merge: It’s basically joins development histories together, preserving history as it happened.
+—Rebase: Reapplies commits on the top of another branch, and rewrites history. 
+  
+19. 	Use git stash.
+— Used (git stash save "Working on index nav") 
+Saved working directory and index state On feature2: Working on index nav
+(git stash list)
+stash@{0}: On feature2: Working on index nav
+git stash apply stash@{0}
+—Using ( git stash apply stash@{0} ) entered in the last stage of work.
+
+
+20. 	create a repository on Github for your working repository and push changes on remote repository.
+
+URL : https://github.com/sachwins/sb-git-exercise1.git
+
+
+
+
+
+
+
+
+
+
