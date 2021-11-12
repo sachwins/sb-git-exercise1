@@ -1,0 +1,469 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;\red11\green90\blue124;
+\red11\green90\blue124;\red159\green160\blue28;\red180\green36\blue25;\red47\green180\blue29;\red46\green174\blue187;
+\red133\green0\blue2;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\csgray\c0;\cssrgb\c0\c42931\c55996;
+\cssrgb\c0\c42931\c55996;\cssrgb\c68468\c68012\c14208;\cssrgb\c76409\c21698\c12524;\cssrgb\c20238\c73898\c14947;\cssrgb\c20196\c73240\c78250;
+\cssrgb\c60000\c0\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13800\viewh11080\viewkind0
+\deftab720
+\pard\tx566\pardeftab720\sl340\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 1. Create a repository\
+\'97Login to Github and create new repository\
+\'97Use \'93git init\'94 in terminal (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 Initialized empty Git repository in /Volumes/All Work/gitweb1/.git/
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 ) \
+\
+2. Make some changes -- add some files, change content of some files\
+\'97Add some files using (git add .) \
+\'97\cf4 \outl0\strokewidth0 No msg was shown\cf2 \outl0\strokewidth0 \strokec2 \
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl340\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 3. \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Commit changes\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf2 \'97Commit files using (git commit -m \'93Commit 1\'94)\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf5 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \'97 [master (root-commit) d63f68c] Commit1\
+\'97 29 files changed, 16832 insertions(+)\
+\
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 4. repeat steps 1-3 for 2 more times. try to remove and ignore some files . Use git diff before each commit.\
+\'97Added some files and make changes to exiting file. \
+\'97Create a gitignore file using (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 touch .gitignore
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 )\
+\'97Find difference using (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 git diff
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 ) Below msg was shown\
+     
+\f2\b\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 diff --git a/index.html b/index.html
+\f1\b0 \cf3 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\b \cf3    index 632f328..4b67ce9 100755
+\f1\b0 \cf3 \
+
+\f2\b \cf3    --- a/index.html
+\f1\b0 \cf3 \
+
+\f2\b \cf3    +++ b/index.html
+\f0\b0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \outl0\strokewidth0 5. \cf2 \outl0\strokewidth0 \strokec2 create changes and revert those changes using git when those changes are not added to staging are\
+\'97revert changes using (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 git checkout -- index.html
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 )\
+\pard\tx566\pardeftab720\sl340\partightenfactor0
+\cf2 \outl0\strokewidth0 \'97\cf4 No msg was shown\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 6. \cf2 \outl0\strokewidth0 \strokec2 create changes and revert those changes after adding changes to staging area\
+\'97 used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 git reset HEAD .) for multiple files\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf5 \'97  Unstaged changes after reset:\
+   M	 index.html
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \outl0\strokewidth0 7. \cf2 \outl0\strokewidth0 \strokec2 create change and revert those changes after committing those changes.\
+\'97 Used (git revert 
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 02764f13e5952c95210d5187e8f3f3fe41959c84 [Commit ID]
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 )\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 error: could not revert 02764f1... Commit2\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf6 hint: after resolving the conflicts, mark the corrected paths\cf3 \
+\cf6 hint: with 'git add <paths>' or 'git rm <paths>'\cf3 \
+\cf6 hint: and commit the result with 'git commit'\
+\pard\tx566\pardeftab720\sl340\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \'97\cf4 I accepted the changes in vscode and reverted.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 8. \cf2 \outl0\strokewidth0 \strokec2 Check repository status before adding changes to staging area, after adding changes to staging area and after committing changes .\
+\'97 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 git status)
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2  \cf2 \outl0\strokewidth0 Before adding to staging\cf2 \outl0\strokewidth0 \strokec2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0   On branch master\
+  Changes not staged for commit:\
+  (use "git add <file>..." to update what will be committed)\
+  (use "git checkout -- <file>..." to discard changes in working directory)\
+\
+	\cf7 modified:   index.html\cf3 \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \'97 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git status)
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1  after adding to staging
+\f1\fs22 \cf7 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf3    On branch master\
+   Changes to be committed:\
+  (use "git reset HEAD <file>..." to unstage)\
+\
+	\cf8 modified:   index.html\cf7 \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \'97 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git status)
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1  after committing\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0    On branch master\
+   nothing to commit, working tree clean\cf7 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 9. \cf2 \outl0\strokewidth0 \strokec2 Display all the commits.\
+\'97 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 git log
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 )\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf6 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0   commit 5758f714113f5b9654cc033d873b91b7e728126e (
+\f2\b \cf9 HEAD -> \cf8 master
+\f1\b0 \cf6 )\cf3 \
+  Author: Sachin <sachin.barman@vinsol.com>\
+  Date:   Fri Nov 12 14:24:13 2021 +0530\
+\
+    Commit5\
+\
+\cf6   commit 066aa9dc6a34b8807e854fed757668065e48b97c\cf3 \
+  Author: Sachin <sachin.barman@vinsol.com>\
+  Date:   Fri Nov 12 14:17:46 2021 +0530\
+\
+    Commit4\
+\
+\cf6   commit e12b05cd8171e6e29ff01b1e39e714a53cfae412\cf3 \
+  Author: Sachin <sachin.barman@vinsol.com>\
+  Date:   Fri Nov 12 14:06:27 2021 +0530\
+\
+    Commit3\
+\
+\cf6   commit 02764f13e5952c95210d5187e8f3f3fe41959c84 \cf3 \
+  Author: Sachin <sachin.barman@vinsol.com>\
+  Date:   Fri Nov 12 13:59:54 2021 +0530\
+\
+    Commit2\
+\
+\cf6   commit d63f68cc460fff0eaf2c9cd505e878dfa92a324c\cf3 \
+  Author: Sachin <sachin.barman@vinsol.com>\
+  Date:   Fri Nov 12 13:29:26 2021 +0530\
+\
+    Commit1
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf7 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 10. \cf2 \outl0\strokewidth0 \strokec2 Display a specific commit.\
+\'97 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 git log -p -1
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 )\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf6 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0    commit 5758f714113f5b9654cc033d873b91b7e728126e (
+\f2\b \cf9 HEAD -> \cf8 master
+\f1\b0 \cf6 )\cf3 \
+   Author: Sachin <sachin.barman@vinsol.com>\
+   Date:   Fri Nov 12 14:24:13 2021 +0530\
+\
+    Commit5\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\b \cf3    diff --git a/index.html b/index.html
+\f1\b0 \cf3 \
+
+\f2\b \cf3    index 5f1c32b..8424622 100755
+\f1\b0 \cf3 \
+
+\f2\b \cf3    --- a/index.html
+\f1\b0 \cf3 \
+
+\f2\b \cf3    +++ b/index.html
+\f1\b0 \cf3 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf9    @@ -30,7 +30,7 @@\cf3 \
+           <li class="nav-item"><a class="nav-link active" href="#">Success Story</a> </li>\
+           <li class="nav-item"><a class="nav-link" href="#">About Us</a> </li>\
+           <li class="nav-item"><a class="nav-link" href="#">Our Blog</a> </li>\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf7    -          <li class="nav-item"><a class="nav-link" href="#">Contact</a> </li>\cf3 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf8    +          <li class="nav-item"><a class="nav-link" href="#">Contacts</a> </li>\cf10 \cb3 ^M\cf3 \cb1 \
+         </ul>\
+       </div>\
+     </nav>\cf7 \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 11. \cf2 \outl0\strokewidth0 \strokec2 create branches called "feature1" and "feature2" from master. 11 . Delete branch "feature2".\
+\'97 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 git checkout -b feature1
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 ) to create a new branch \'93feature1\'94 from master\
+\
+\'97 Switched to Master  Using (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 git checkout master
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 )\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \outl0\strokewidth0 \'97 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git checkout -b feature2
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 ) to create a new branch \'93feature2\'94 from master\
+\
+\'97 Used ( 
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git branch -d feature2
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1  ) To delete branch \'93feature2\'94\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 12. \cf2 \kerning1\expnd0\expndtw0 	\cf2 \expnd0\expndtw0\kerning0
+Make some commits on "feature1". \
+\'97 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git commit -m "blog page added"
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 )\
+   
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 [feature1 bb9ff50] blog page added\
+  1 file changed, 268 insertions(+)\
+  create mode 100644 blog.html\
+\
+\
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 13. \cf2 \kerning1\expnd0\expndtw0 	\cf2 \expnd0\expndtw0\kerning0
+Make some commits on branch \'94master\'94. \
+\'97 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git commit -m "contact added"
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 )\
+   
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 [master b66fec7] contact added\
+  1 file changed, 268 insertions(+)\
+  create mode 100644 contact.html\
+\
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 14. \cf2 \kerning1\expnd0\expndtw0 	\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 merge branch "feature1" in "master" (make some conflicts by changing same file on same line in both the branches) \
+\'97 \cf2 \outl0\strokewidth0 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git merge feature1
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 )\
+   
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 Merge made by the 'recursive' strategy.\
+ blog.html | 268 \cf8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\cf3 \
+ 1 file changed, 268 insertions(+)\
+ create mode 100644 blog.html\
+\
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 15. \cf2 \kerning1\expnd0\expndtw0 	\cf2 \expnd0\expndtw0\kerning0
+create branch "feature2" from master.\
+\'97 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git checkout -b feature2
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 )\
+\
+\cf2 15. \cf2 \kerning1\expnd0\expndtw0 	\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Make some commits on "feature2".\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \outl0\strokewidth0 \'97 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git commit -m "Commit in branch feature2"
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 )\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0   [feature2 ddd5cfe] Commit in branch feature2\
+  3 files changed, 9 insertions(+), 142 deletions(-)
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf7 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 16. \cf2 \kerning1\expnd0\expndtw0 	\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Make some commits on branch "master".
+\f1\fs22 \cf7 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \'97 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git commit -m "Banner section remove from index"
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 )\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0   [master 50775be] Banner section remove from index\
+  1 file changed, 1 insertion(+), 15 deletions(-)
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf7 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 17. \cf2 \kerning1\expnd0\expndtw0 	\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 rebase branch "master" in "feature2" (make some conflicts by changing same file on same line in both the branches) .\
+\cf2 \outl0\strokewidth0 \'97 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git rebase master
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 )\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0   First, rewinding head to replay your work on top of it...\
+  Applying: Commit in branch feature2\
+  Using index info to reconstruct a base tree...\
+  M	blog.html\
+  M	contact.html\
+  M	index.html\
+  Falling back to patching base and 3-way merge...\
+  Auto-merging index.html\
+  CONFLICT (content): Merge conflict in index.html\
+  Auto-merging contact.html\
+  CONFLICT (content): Merge conflict in contact.html\
+  Auto-merging blog.html\
+  CONFLICT (content): Merge conflict in blog.html\
+  error: Failed to merge in the changes.\
+  Patch failed at 0001 Commit in branch feature2\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf6   hint: Use 'git am --show-current-patch' to see the failed patch\cf3 \
+\
+  Resolve all conflicts manually, mark them as resolved with\
+  "git add/rm <conflicted_files>", then run "git rebase --continue".\
+  You can instead skip this commit: run "git rebase --skip".\
+  To abort and get back to the state before "git rebase", run "git rebase --abort".\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \'97Then fixed conflicts mannually
+\f1\fs22 \cf7 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \'97 Then used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git add .
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 ) \
+\
+\'97Then used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git rebase --continue
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 ) \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0  Applying: Commit in branch feature2\cf7 \
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 18. \cf2 \kerning1\expnd0\expndtw0 	\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 find the differences between "merge" and "rebase" in above cases.\
+\cf2 \outl0\strokewidth0 \'97\cf2 \outl0\strokewidth0 \strokec2 Merge: It\'92s basically joins development histories together, preserving history as it happened.\
+\cf2 \outl0\strokewidth0 \'97\cf2 \outl0\strokewidth0 \strokec2 Rebase: Reapplies commits on the top of another branch, and rewrites history. \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf7 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0   \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 19. \cf2 \kerning1\expnd0\expndtw0 	\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Use git stash.\
+\cf2 \outl0\strokewidth0 \'97 Used (
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git stash save "Working on index nav"
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 ) \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 Saved working directory and index state On feature2: Working on index nav\
+(git stash list)\
+stash@\{0\}: On feature2: Working on index nav\
+git stash apply stash@\{0\}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \'97\cf2 Using ( 
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 git stash apply stash@\{0\} 
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 ) entered in the last stage of work.
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \
+\
+\
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 20. \cf2 \kerning1\expnd0\expndtw0 	\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 create a repository on Github for your working repository and push changes on remote repository.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+\
+\
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf7 \kerning1\expnd0\expndtw0 \CocoaLigature0 \outl0\strokewidth0 \
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 \expnd0\expndtw0\kerning0
+\CocoaLigature1 \outl0\strokewidth0 \strokec2 \
+}
